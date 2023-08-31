@@ -2,8 +2,8 @@
 
 namespace App\Repository;
 use App\Models\Tag;
-use App\Dtos\Tags\CreateTagDto;
-use App\Dtos\Tags\UpdateTagDto;
+use App\Dtos\Tag\CreateTagDto;
+use App\Dtos\Tag\UpdateTagDto;
 use App\Repository\Contracts\TagRepository;
 
 class TagSqliteRepository implements TagRepository

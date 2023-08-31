@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Dtos\Tags;
+namespace App\Dtos\Tag;
 
 class CreateTagDto 
 {

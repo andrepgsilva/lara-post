@@ -4,8 +4,8 @@ namespace Tests\Feature;
 
 use App\Models\Tag;
 use Tests\TestCase;
-use App\Dtos\Tags\CreateTagDto;
-use App\Dtos\Tags\UpdateTagDto;
+use App\Dtos\Tag\CreateTagDto;
+use App\Dtos\Tag\UpdateTagDto;
 use App\Repository\TagSqliteRepository;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;

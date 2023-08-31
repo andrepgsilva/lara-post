@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('body');
             $table->string('image_url');
             
-            $table->foreign('category_id')->references('id')->on('posts');
+            $table->foreign('category_id')->references('id')->on('categories');
 
             $table->timestamps();
         });
