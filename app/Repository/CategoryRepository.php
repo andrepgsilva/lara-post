@@ -4,9 +4,9 @@ namespace App\Repository;
 use App\Models\Category;
 use App\Dtos\Category\CreateCategoryDto;
 use App\Dtos\Category\UpdateCategoryDto;
-use App\Repository\Contracts\CategoryRepository;
+use App\Repository\Contracts\CategoryRepositoryContract;
 
-class CategorySqliteRepository implements CategoryRepository
+class CategoryRepository implements CategoryRepositoryContract
 {
     public function create(CreateCategoryDto $createCategoryDto): Category 
     {

@@ -4,9 +4,9 @@ namespace App\Repository;
 use App\Models\Tag;
 use App\Dtos\Tag\CreateTagDto;
 use App\Dtos\Tag\UpdateTagDto;
-use App\Repository\Contracts\TagRepository;
+use App\Repository\Contracts\TagRepositoryContract;
 
-class TagSqliteRepository implements TagRepository
+class TagRepository implements TagRepositoryContract
 {
     function create(CreateTagDto $createTagDto): Tag
     {

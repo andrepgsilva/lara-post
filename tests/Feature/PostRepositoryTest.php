@@ -8,17 +8,17 @@ use App\Models\Post;
 use App\Models\Category;
 use App\Dtos\Post\CreatePostDto;
 use App\Dtos\Post\UpdatePostDto;
-use App\Repository\PostSqliteRepository;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Repository\PostRepository;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class PostSqliteRepositoryTest extends TestCase
+class PostRepositoryTest extends TestCase
 {
     use RefreshDatabase;
 
     public function test_it_can_create_a_post(): void
     {
-        $postSqlRepositoryTest = new PostSqliteRepository();
+        $postSqlRepositoryTest = new PostRepository();
 
         $createPostDto = new CreatePostDto();
         $createPostDto->name = 'new name';
@@ -34,7 +34,7 @@ class PostSqliteRepositoryTest extends TestCase
 
     public function test_it_can_create_a_post_with_a_category(): void 
     {
-        $postSqlRepositoryTest = new PostSqliteRepository();
+        $postSqlRepositoryTest = new PostRepository();
         $category = Category::create(['name' => 'new category']);
 
         $createPostDto = new CreatePostDto();
@@ -52,7 +52,7 @@ class PostSqliteRepositoryTest extends TestCase
 
     public function test_it_can_create_a_post_with_tags(): void 
     {
-        $postSqlRepositoryTest = new PostSqliteRepository();
+        $postSqlRepositoryTest = new PostRepository();
         $category = Category::create(['name' => 'new category']);
         $firstTag = Tag::create(['name' => 'first tag']);
         $secondTag = Tag::create(['name' => 'second tag']);
@@ -73,7 +73,7 @@ class PostSqliteRepositoryTest extends TestCase
 
     public function test_it_can_get_a_post(): void 
     {
-        $postSqlRepositoryTest = new PostSqliteRepository();
+        $postSqlRepositoryTest = new PostRepository();
         $createPostDto = new CreatePostDto();
         $category = Category::create(['name' => 'new category']);
         $createPostDto->name = 'new name';
@@ -92,7 +92,7 @@ class PostSqliteRepositoryTest extends TestCase
 
     public function test_it_can_update_a_post(): void 
     {
-        $postSqlRepositoryTest = new PostSqliteRepository();
+        $postSqlRepositoryTest = new PostRepository();
         $category = Category::create(['name' => 'new category']);
         $categoryTwo = Category::create(['name' => 'updated category']);
         $firstTag = Tag::create(['name' => 'first tag']);
@@ -126,7 +126,7 @@ class PostSqliteRepositoryTest extends TestCase
 
     public function test_it_can_delete_a_post(): void 
     {
-        $postSqlRepositoryTest = new PostSqliteRepository();
+        $postSqlRepositoryTest = new PostRepository();
         $createPostDto = new CreatePostDto();
         $category = Category::create(['name' => 'new category']);
         $firstTag = Tag::create(['name' => 'first tag']);

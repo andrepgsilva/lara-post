@@ -6,7 +6,7 @@ use App\Dtos\Category\CreateCategoryDto;
 use App\Dtos\Category\UpdateCategoryDto;
 use App\Models\Category;
 
-interface CategoryRepository 
+interface CategoryRepositoryContract 
 {
     function create(CreateCategoryDto $createCategoryDto): Category;
 
